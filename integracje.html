@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Phase 2: add the API origin (APP_CONFIG.apiBaseUrl) to connect-src. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://connect.facebook.net; style-src 'self'; img-src 'self' data: https://www.facebook.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Integracje &amp; Automatyzacja — API, przepływy danych, PowerShell | Fordon Systems</title>
+  <meta name="description" content="Integracje systemów (API, ERP, WMS, CRM), przepływy danych i automatyzacja powtarzalnych zadań w PowerShell i .NET.">
+  <meta name="theme-color" content="#070B14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Integracje &amp; Automatyzacja — Fordon Systems">
+  <meta property="og:locale" content="pl_PL">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- META PIXEL: configured in js/config.js (APP_CONFIG.metaPixel), injected by js/app.js — see index.html for details. -->
+  <script src="./js/config.js" defer></script>
+  <script src="./js/app.js" defer></script>
+</head>
+<body data-page="integration">
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+  <div class="bg" aria-hidden="true"><div class="bg__nebula"></div><canvas id="bg-network"></canvas><div class="bg__hex"></div><div class="bg__spot"></div></div>
+
+  <header class="site-header" data-component="header"></header>
+
+  <main id="main">
+    <div class="container">
+      <nav data-component="breadcrumbs"></nav>
+      <nav data-component="pillar-nav"></nav>
+    </div>
+
+    <!-- 1. Pillar hero -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="page-hero__inner">
+          <span class="page-hero__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 6h9"/><path d="M6.3 8.2l4.4 7.6"/><path d="M17.7 8.2l-4.4 7.6"/></svg></span>
+          <h1 id="page-title">Połączone systemy i procesy, które <span class="text-gradient">działają same</span>.</h1>
+          <p class="page-hero__lead">
+            Spinam aplikacje, bazy danych i usługi zewnętrzne w spójne przepływy danych oraz automatyzuję powtarzalne
+            zadania. Twój zespół odzyskuje czas na pracę, która faktycznie przynosi wartość.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="kontakt.html?pillar=integration#formularz">Umów konsultację: Integracje
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#zakres">Zakres i technologie</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. When to get support -->
+    <section class="section section--tight" aria-labelledby="problems-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Kiedy warto skorzystać ze wsparcia?</span>
+          <h2 id="problems-title">Ręczna praca, która nie powinna już istnieć</h2>
+        </div>
+        <ul class="problems">
+          <li class="problem panel" data-reveal>
+            <span class="problem__num">01</span>
+            <h3>Przepisywanie danych między systemami</h3>
+            <p>Zamówienia, statusy i faktury kopiowane ręcznie — wolno, drogo i z błędami, które wychodzą za późno.</p>
+          </li>
+          <li class="problem panel" data-reveal>
+            <span class="problem__num">02</span>
+            <h3>Raporty składane ręcznie co tydzień</h3>
+            <p>Godziny pracy specjalistów idą na eksporty, sklejanie arkuszy i wysyłkę maili zamiast na analizę.</p>
+          </li>
+          <li class="problem panel" data-reveal>
+            <span class="problem__num">03</span>
+            <h3>Systemy, które „nie rozmawiają” ze sobą</h3>
+            <p>ERP, WMS, CRM, e-commerce i systemy partnerów działają osobno, a informacja gubi się po drodze.</p>
+          </li>
+          <li class="problem panel" data-reveal>
+            <span class="problem__num">04</span>
+            <h3>Kruche skrypty bez monitoringu</h3>
+            <p>Integracja „kiedyś działała”, a o jej awarii dowiadujesz się od klienta, nie od systemu.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. Scope & technologies -->
+    <section class="section" id="zakres" aria-labelledby="scope-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Zakres realizacji i technologie</span>
+          <h2 id="scope-title">Niezawodny przepływ danych od końca do końca</h2>
+        </div>
+        <div class="scope__grid">
+          <ul class="checklist">
+            <li><strong>Integracje API</strong> — REST / Web API, webhooki, uwierzytelnianie i wersjonowanie interfejsów.</li>
+            <li><strong>Wymiana plików i komunikatów</strong> — CSV, XML, JSON, SFTP z walidacją i obsługą wyjątków.</li>
+            <li><strong>Przepływy danych między systemami</strong> — ERP, WMS, CRM, e-commerce i systemy partnerów.</li>
+            <li><strong>Automatyzacja zadań</strong> — PowerShell, harmonogramy i usługi .NET (Worker Services).</li>
+            <li><strong>Odporność integracji</strong> — retry, kolejki, logowanie i alerting zamiast cichych awarii.</li>
+            <li><strong>Dokumentacja interfejsów</strong> — specyfikacje, mapowania pól i runbooki obsługi.</li>
+          </ul>
+          <aside class="tech panel" aria-labelledby="tech-title">
+            <h3 id="tech-title">Technologie i narzędzia</h3>
+            <ul class="chips">
+              <li class="chip chip--accent">REST API</li>
+              <li class="chip chip--accent">PowerShell</li>
+              <li class="chip">.NET Worker Services</li>
+              <li class="chip">JSON</li>
+              <li class="chip">XML</li>
+              <li class="chip">SFTP</li>
+              <li class="chip">Webhooks</li>
+              <li class="chip">OAuth 2.0</li>
+              <li class="chip">Task Scheduler</li>
+              <li class="chip">MS SQL Server</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Cooperation model -->
+    <section class="section section--tight" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Model współpracy</span>
+          <h2 id="process-title">Trzy kroki do zautomatyzowanego procesu</h2>
+        </div>
+        <ol data-component="process"></ol>
+      </div>
+    </section>
+
+    <!-- 5. Contextual pre-fill CTA -->
+    <section class="section section--tight" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2 id="cta-title">Który proces zabiera Twojemu zespołowi najwięcej czasu?</h2>
+            <p>Opisz go — formularz otworzy się z zaznaczonym obszarem „Integracje &amp; Automatyzacja”.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--primary" href="kontakt.html?pillar=integration#formularz">Umów bezpłatną konsultację</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-component="footer"></footer>
+</body>
+</html>

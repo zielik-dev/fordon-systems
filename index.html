@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Phase 2: add the API origin (APP_CONFIG.apiBaseUrl) to connect-src. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://connect.facebook.net; style-src 'self'; img-src 'self' data: https://www.facebook.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Fordon Systems — B2B IT Partner | Architektura .NET, infrastruktura, SQL, automatyzacja</title>
+  <meta name="description" content="Fordon Systems — Michał Zieliński, CEO i Konsultant. 20 lat doświadczenia (Virgin Media O2, GXO): dedykowane oprogramowanie .NET, stabilna infrastruktura, wydajne bazy SQL, integracje i audyty. Polska & UK.">
+  <meta name="theme-color" content="#070B14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fordon Systems — B2B IT Partner">
+  <meta property="og:description" content="Od stabilizacji krytycznej infrastruktury po dedykowane oprogramowanie .NET, które skaluje Twój biznes.">
+  <meta property="og:locale" content="pl_PL">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- ===================== META PIXEL (Meta Ads) =====================
+       Configure in js/config.js -> APP_CONFIG.metaPixel { enabled, pixelId }.
+       The pixel is injected by js/app.js (initMetaPixel) instead of an inline
+       snippet, so the CSP above does not need 'unsafe-inline'.
+       Conversions: trackLeadEvent(payload) -> fbq('track', 'Lead', ..., { eventID: leadId })
+       — eventID enables deduplication with the Conversions API (CAPI) in Phase 2.
+       RODO / ePrivacy: enable only together with a cookie-consent banner.
+       Optional no-JS fallback (replace PIXEL_ID):
+       <noscript><img height="1" width="1" hidden alt="" src="https://www.facebook.com/tr?id=PIXEL_ID&ev=PageView&noscript=1"></noscript>
+       ================================================================= -->
+
+  <script src="./js/config.js" defer></script>
+  <script src="./js/app.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Fordon Systems",
+    "description": "B2B IT Partner: architektura .NET, infrastruktura IT, bazy danych SQL, integracje, automatyzacja i audyty.",
+    "founder": { "@type": "Person", "name": "Michał Zieliński", "jobTitle": "CEO i Konsultant", "sameAs": ["https://www.linkedin.com/in/michal-zielinski-a67a75123/"] },
+    "address": { "@type": "PostalAddress", "addressLocality": "Jarużyn / Bydgoszcz", "addressCountry": "PL" },
+    "areaServed": ["PL", "GB"],
+    "email": "kontakt@fordonsystems.pl"
+  }
+  </script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+
+  <div class="bg" aria-hidden="true">
+    <div class="bg__nebula"></div>
+    <canvas id="bg-network"></canvas>
+    <div class="bg__hex"></div>
+    <div class="bg__spot"></div>
+  </div>
+
+  <header class="site-header" data-component="header"></header>
+
+  <main id="main">
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <span class="badge">B2B IT PARTNER • ARCHITEKTURA .NET • WŁASNE ROZWIĄZANIA SYSTEMOWE</span>
+          <h1 class="hero__title" id="hero-title">
+            Od stabilizacji krytycznej infrastruktury po <span class="text-gradient">dedykowane oprogramowanie</span>, które skaluje Twój biznes.
+          </h1>
+          <p class="hero__lead">
+            Łączę 20 lat brytyjskiego doświadczenia w utrzymaniu systemów dla liderów logistyki i telekomunikacji
+            (Virgin Media O2, GXO) z nowoczesną inżynierią .NET. Pomagam przedsiębiorstwom eliminować wąskie gardła,
+            automatyzować procesy i wdrażać niezawodne aplikacje.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#kontakt">
+              Umów konsultację techniczną
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#oferta">Poznaj zakres wsparcia</a>
+          </div>
+        </div>
+        <div class="hero-cluster" data-component="hero-cluster"></div>
+      </div>
+    </section>
+
+    <!-- ===== TRUST BAR ===== -->
+    <section class="section--tight" aria-label="Doświadczenie w liczbach">
+      <div class="container">
+        <ul class="trust panel">
+          <li class="trust__item">
+            <span class="trust__value" data-count="20" data-suffix="+">20+</span>
+            <span class="trust__title">Lat</span>
+            <span class="trust__desc">Doświadczenia w operacjach i architekturze IT (UK &amp; Polska)</span>
+          </li>
+          <li class="trust__item">
+            <span class="trust__value" data-count="100" data-suffix="+">100+</span>
+            <span class="trust__title">Mikroserwisów</span>
+            <span class="trust__desc">Zaprojektowanych i utrzymywanych w środowisku .NET / Windows Server</span>
+          </li>
+          <li class="trust__item">
+            <span class="trust__value" data-count="125" data-suffix="+">125+</span>
+            <span class="trust__title">Change Requestów / rok</span>
+            <span class="trust__desc">Wdrożonych w rygorystycznym standardzie produkcyjnym (ITIL)</span>
+          </li>
+          <li class="trust__item">
+            <span class="trust__value trust__value--text">Lean Six Sigma</span>
+            <span class="trust__title">Green Belt</span>
+            <span class="trust__desc">Certyfikowana optymalizacja procesów i wydajności operacyjnej</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== OFFER / HEX GRID ===== -->
+    <section class="section" id="oferta" aria-labelledby="oferta-title">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <span class="eyebrow">Zakres wsparcia</span>
+          <h2 id="oferta-title">Sześć filarów, jeden partner odpowiedzialny za wynik</h2>
+          <p>Od kodu, przez serwery i bazy danych, po procesy. Wybierz obszar, który dziś najbardziej spowalnia Twoją firmę.</p>
+        </div>
+        <div data-component="hex-grid"></div>
+        <noscript>
+          <ul class="chips">
+            <li><a class="chip" href="software.html">Software &amp; Aplikacje</a></li>
+            <li><a class="chip" href="infrastruktura.html">Infrastruktura IT</a></li>
+            <li><a class="chip" href="bazy-danych.html">Dane &amp; Bazy SQL</a></li>
+            <li><a class="chip" href="integracje.html">Integracje &amp; Automatyzacja</a></li>
+            <li><a class="chip" href="audyty.html">Audyty &amp; Optymalizacja</a></li>
+            <li><a class="chip" href="kontakt.html">Konsulting &amp; Kontakt</a></li>
+          </ul>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="o-mnie" aria-labelledby="o-mnie-title">
+      <div class="container about__grid">
+        <div class="portrait" data-reveal>
+          <div class="portrait__frame">
+            <img src="./assets/michal-zielinski.jpg" alt="Michał Zieliński — CEO i Konsultant Fordon Systems" width="600" height="693" loading="lazy" decoding="async">
+            <span class="portrait__fallback" aria-hidden="true">MZ</span>
+          </div>
+          <span class="portrait__tag">CEO &amp; Konsultant</span>
+        </div>
+
+        <div class="about__text" data-reveal>
+          <span class="eyebrow">O mnie</span>
+          <h2 id="o-mnie-title">Michał Zieliński</h2>
+          <span class="about__role">CEO i Konsultant — Fordon Systems</span>
+          <p>
+            Od ponad 20 lat utrzymuję i rozwijam systemy, od których zależy ciągłość operacji — w Wielkiej Brytanii
+            i w Polsce, dla liderów logistyki i telekomunikacji, takich jak Virgin Media O2 i GXO. Tam, gdzie każda
+            minuta przestoju ma konkretną cenę.
+          </p>
+          <p>
+            Łączę dwa światy: inżynierię (C#, .NET, SQL, PowerShell, administracja Windows Server i IIS) oraz
+            zarządzanie operacjami i procesami (CILT Level 5, Lean Six Sigma Green Belt, ITIL Change Management).
+            Dzięki temu rozmawiam zarówno z zespołem technicznym, jak i z zarządem — w języku kosztów, ryzyka i rezultatu.
+          </p>
+          <p>
+            W Fordon Systems liczy się mierzalny efekt: mniej incydentów, krótszy czas reakcji, zautomatyzowane procesy
+            i dokumentacja, dzięki której Twój zespół nie jest zależny od jednej osoby.
+          </p>
+          <ul class="about__creds">
+            <li><strong>Inżynieria .NET</strong><span>C#, .NET, SQL, PowerShell</span></li>
+            <li><strong>Infrastruktura</strong><span>Windows Server, IIS, Docker / WSL2</span></li>
+            <li><strong>CILT Level 5</strong><span>Logistyka i zarządzanie operacjami (UK)</span></li>
+            <li><strong>Lean Six Sigma Green Belt</strong><span>Optymalizacja procesów, DMAIC</span></li>
+          </ul>
+          <div class="about__actions">
+            <a class="btn btn--primary" href="#kontakt">Porozmawiajmy o Twoim projekcie</a>
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/michal-zielinski-a67a75123/" data-link="linkedin" target="_blank" rel="noopener noreferrer me">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.48 2.48 0 1 1-4.96 0 2.48 2.48 0 0 1 4.96 0zM.5 8h4v13h-4V8zm7 0h3.8v1.8h.05c.53-1 1.84-2.06 3.8-2.06 4.05 0 4.8 2.67 4.8 6.15V21h-4v-6.3c0-1.5-.03-3.43-2.1-3.43-2.1 0-2.42 1.64-2.42 3.33V21h-4V8z"/></svg>
+              Profil na LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT + LEAD WIZARD ===== -->
+    <section class="section" id="kontakt" aria-labelledby="kontakt-title">
+      <div class="container contact__grid">
+        <div class="contact__aside" data-reveal>
+          <span class="eyebrow">Kontakt</span>
+          <h2 id="kontakt-title">Porozmawiajmy o Twoim wyzwaniu</h2>
+          <p>
+            Trzy krótkie kroki i otrzymasz propozycję terminu bezpłatnej, 30-minutowej konsultacji technicznej.
+            Bez zobowiązań — konkretna diagnoza i rekomendacja kolejnego kroku.
+          </p>
+          <ul class="channels">
+            <li>
+              <a class="channel" href="kontakt.html?channel=teams#formularz" data-teams>
+                <span class="channel__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3z"/></svg></span>
+                <span><strong data-bind="contact.teamsLabel">Microsoft Teams</strong><span>Rozmowa online z udostępnieniem ekranu</span></span>
+              </a>
+            </li>
+            <li>
+              <a class="channel" href="mailto:kontakt@fordonsystems.pl" data-mailto>
+                <span class="channel__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg></span>
+                <span><strong>E-mail</strong><span data-bind="contact.email">kontakt@fordonsystems.pl</span></span>
+              </a>
+            </li>
+          </ul>
+          <div data-component="social"></div>
+        </div>
+
+        <div id="formularz" data-component="lead-wizard">
+          <noscript>
+            <p>Formularz wymaga JavaScript. Napisz bezpośrednio: <a href="mailto:kontakt@fordonsystems.pl">kontakt@fordonsystems.pl</a></p>
+          </noscript>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-component="footer"></footer>
+</body>
+</html>

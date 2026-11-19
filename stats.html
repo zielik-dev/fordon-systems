@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Phase 2: add the API origin (APP_CONFIG.apiBaseUrl) to connect-src. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Statystyki — Fordon Systems (panel wewnętrzny)</title>
+  <meta name="theme-color" content="#070B14">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/config.js" defer></script>
+  <script src="./js/app.js" defer></script>
+</head>
+<!--
+  ACCESS CONTROL PLACEHOLDER
+  This page is intentionally not linked from the site navigation and is excluded from indexing,
+  but a static file is still publicly reachable. Protect it before publishing real data:
+    - Phase 1 (static): data shown here comes ONLY from the current browser's localStorage,
+      so nothing is exposed to other visitors.
+    - Phase 2 (api): enforce authorization server-side on GET /api/analytics/summary
+      (bearer token / Cloudflare Access / IP allow-list). Optionally put this page behind
+      Cloudflare Access (Zero Trust) or HTTP Basic Auth at the edge.
+-->
+<body data-page="stats">
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+  <div class="bg" aria-hidden="true"><div class="bg__nebula"></div><canvas id="bg-network"></canvas><div class="bg__hex"></div><div class="bg__spot"></div></div>
+
+  <header class="site-header" data-component="header"></header>
+
+  <main id="main">
+    <section class="section section--tight" aria-labelledby="stats-title">
+      <div class="container">
+        <span class="eyebrow">Panel wewnętrzny</span>
+        <h1 id="stats-title">Statystyki ruchu i zgłoszeń</h1>
+        <p>Wizyty, odsłony, źródła ruchu i zdarzenia <code>Lead</code>. W trybie <code>static</code> dane pochodzą wyłącznie z tej przeglądarki (diagnostyka); pełne dane zbiorcze będą dostępne po przełączeniu na tryb <code>api</code>.</p>
+
+        <ul class="stats-meta">
+          <li><span>Tryb aplikacji</span><strong id="stats-mode">—</strong></li>
+          <li><span>Źródło danych</span><strong id="stats-source">—</strong></li>
+          <li><span>Śledzenie tej przeglądarki</span><strong id="stats-tracking">—</strong></li>
+          <li><span>Zakres</span><strong id="stats-range">—</strong></li>
+        </ul>
+
+        <!-- Phase 2 only: forwards the token as "Authorization: Bearer <token>". Real protection is server-side. -->
+        <form class="stats-auth panel" id="stats-auth" hidden autocomplete="off">
+          <label for="stats-token">Token dostępu</label>
+          <input id="stats-token" name="token" type="password" autocomplete="off" spellcheck="false">
+          <button class="btn btn--primary btn--sm" type="submit">Zaloguj</button>
+        </form>
+
+        <div class="stats-toolbar">
+          <button class="btn btn--ghost btn--sm" type="button" data-stats-action="refresh">Odśwież</button>
+          <button class="btn btn--ghost btn--sm" type="button" data-stats-action="demo" aria-pressed="false">Dane demo</button>
+          <button class="btn btn--ghost btn--sm" type="button" data-stats-action="export">Eksport JSON</button>
+          <button class="btn btn--ghost btn--sm" type="button" data-stats-action="notrack">Przełącz wykluczenie tej przeglądarki</button>
+          <button class="btn btn--ghost btn--sm" type="button" data-stats-action="clear">Wyczyść dane lokalne</button>
+        </div>
+        <p class="stats-status" id="stats-status" role="status"></p>
+
+        <div class="kpis" id="stats-kpis"></div>
+
+        <div class="stats-grid">
+          <section class="stats-card panel" aria-labelledby="h-paths"><h2 id="h-paths">Podstrony (odsłony)</h2><div id="stats-paths"></div></section>
+          <section class="stats-card panel" aria-labelledby="h-ref"><h2 id="h-ref">Źródła ruchu (referrer)</h2><div id="stats-referrers"></div></section>
+          <section class="stats-card panel" aria-labelledby="h-src"><h2 id="h-src">utm_source</h2><div id="stats-utm-source"></div></section>
+          <section class="stats-card panel" aria-labelledby="h-camp"><h2 id="h-camp">utm_campaign</h2><div id="stats-utm-campaign"></div></section>
+        </div>
+
+        <section class="stats-card panel" aria-labelledby="h-leads">
+          <h2 id="h-leads">Ostatnie zgłoszenia (Lead)</h2>
+          <div class="table-wrap">
+            <table class="stats-table">
+              <thead>
+                <tr><th scope="col">Data</th><th scope="col">Obszary</th><th scope="col">Firma</th><th scope="col">Pilność</th><th scope="col">Kanał</th><th scope="col">E-mail</th><th scope="col">utm_source</th></tr>
+              </thead>
+              <tbody id="stats-leads"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-component="footer"></footer>
+</body>
+</html>

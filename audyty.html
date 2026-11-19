@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Phase 2: add the API origin (APP_CONFIG.apiBaseUrl) to connect-src. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://connect.facebook.net; style-src 'self'; img-src 'self' data: https://www.facebook.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Audyty &amp; Optymalizacja — Root Cause Analysis, Lean Six Sigma | Fordon Systems</title>
+  <meta name="description" content="Audyty techniczne i procesowe, Root Cause Analysis, Lean Six Sigma, walidacja zmian oraz SOP i runbooki. Diagnoza wąskich gardeł i plan naprawy.">
+  <meta name="theme-color" content="#070B14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Audyty &amp; Optymalizacja — Fordon Systems">
+  <meta property="og:locale" content="pl_PL">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- META PIXEL: configured in js/config.js (APP_CONFIG.metaPixel), injected by js/app.js — see index.html for details. -->
+  <script src="./js/config.js" defer></script>
+  <script src="./js/app.js" defer></script>
+</head>
+<body data-page="audit">
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+  <div class="bg" aria-hidden="true"><div class="bg__nebula"></div><canvas id="bg-network"></canvas><div class="bg__hex"></div><div class="bg__spot"></div></div>
+
+  <header class="site-header" data-component="header"></header>
+
+  <main id="main">
+    <div class="container">
+      <nav data-component="breadcrumbs"></nav>
+      <nav data-component="pillar-nav"></nav>
+    </div>
+
+    <!-- 1. Pillar hero -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="page-hero__inner">
+          <span class="page-hero__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16" y2="16"/><polyline points="7.5 12.5 10 10 12 12 14.5 9"/></svg></span>
+          <h1 id="page-title">Diagnoza wąskich gardeł, <span class="text-gradient">zanim zaczną kosztować</span>.</h1>
+          <p class="page-hero__lead">
+            Przeprowadzam audyty techniczne i procesowe, łącząc perspektywę IT z metodyką Lean Six Sigma.
+            Wskazuję przyczyny źródłowe problemów, ich koszt dla biznesu i konkretny plan naprawy.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="kontakt.html?pillar=audit#formularz">Umów konsultację: Audyt
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#zakres">Zakres i metodyki</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. When to get support -->
+    <section class="section section--tight" aria-labelledby="problems-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Kiedy warto skorzystać ze wsparcia?</span>
+          <h2 id="problems-title">Kiedy potrzebujesz niezależnego spojrzenia</h2>
+        </div>
+        <ul class="problems">
+          <li class="problem panel" data-reveal>
+            <span class="problem__num">01</span>
+            <h3>Wiesz, że coś nie działa — nie wiesz dlaczego</h3>
+            <p>Objawy są widoczne (opóźnienia, błędy, reklamacje), ale przyczyna ginie między działami i systemami.</p>
+          </li>
+          <li class="problem panel" data-reveal>
+            <span class="problem__num">02</span>
+            <h3>Rosnący koszt IT bez widocznego efektu</h3>
+            <p>Budżet na utrzymanie rośnie, a liczba incydentów i czas obsługi zgłoszeń wcale nie spadają.</p>
+          </li>
+          <li class="problem panel" data-reveal>
+            <span class="problem__num">03</span>
+            <h3>Każda zmiana wprowadza nowe błędy</h3>
+            <p>Brak testów, walidacji i procesu zmian sprawia, że wdrożenia są loterią zamiast procedurą.</p>
+          </li>
+          <li class="problem panel" data-reveal>
+            <span class="problem__num">04</span>
+            <h3>Proces zależy od jednej osoby</h3>
+            <p>Brak SOP i runbooków — urlop lub odejście kluczowego pracownika paraliżuje operacje.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. Scope & technologies -->
+    <section class="section" id="zakres" aria-labelledby="scope-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Zakres realizacji i metodyki</span>
+          <h2 id="scope-title">Fakty, przyczyny, priorytety — nie opinie</h2>
+        </div>
+        <div class="scope__grid">
+          <ul class="checklist">
+            <li><strong>Audyt techniczny</strong> — architektura, kod, infrastruktura, bazy danych i bezpieczeństwo zmian.</li>
+            <li><strong>Audyt procesowy</strong> — mapowanie procesu, analiza marnotrawstwa (Lean) i podejście DMAIC.</li>
+            <li><strong>Root Cause Analysis</strong> — 5 Why i diagram Ishikawy dla incydentów i problemów powracających.</li>
+            <li><strong>Walidacja i testy zmian</strong> — plan wdrożenia, kryteria akceptacji i ścieżka rollbacku.</li>
+            <li><strong>SOP i Runbooki</strong> — standaryzacja pracy i przekazanie wiedzy zespołowi.</li>
+            <li><strong>Raport z rekomendacjami</strong> — priorytety w układzie koszt / ryzyko / efekt, gotowe do decyzji zarządu.</li>
+          </ul>
+          <aside class="tech panel" aria-labelledby="tech-title">
+            <h3 id="tech-title">Metodyki i narzędzia</h3>
+            <ul class="chips">
+              <li class="chip chip--accent">Lean Six Sigma</li>
+              <li class="chip chip--accent">Root Cause Analysis</li>
+              <li class="chip">DMAIC</li>
+              <li class="chip">5 Why</li>
+              <li class="chip">Ishikawa</li>
+              <li class="chip">ITIL</li>
+              <li class="chip">KPI</li>
+              <li class="chip">SOP</li>
+              <li class="chip">Runbooks</li>
+              <li class="chip">Testy &amp; Walidacja</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Cooperation model -->
+    <section class="section section--tight" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Model współpracy</span>
+          <h2 id="process-title">Trzy kroki od diagnozy do poprawy</h2>
+        </div>
+        <ol data-component="process"></ol>
+      </div>
+    </section>
+
+    <!-- 5. Contextual pre-fill CTA -->
+    <section class="section section--tight" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2 id="cta-title">Chcesz wiedzieć, gdzie tracisz czas i pieniądze?</h2>
+            <p>Zacznijmy od rozmowy — formularz otworzy się z zaznaczonym obszarem „Audyty &amp; Optymalizacja”.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--primary" href="kontakt.html?pillar=audit#formularz">Umów bezpłatną konsultację</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-component="footer"></footer>
+</body>
+</html>

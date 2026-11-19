@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Phase 2: add the API origin (APP_CONFIG.apiBaseUrl) to connect-src. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://connect.facebook.net; style-src 'self'; img-src 'self' data: https://www.facebook.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Software &amp; Aplikacje .NET — Fordon Systems</title>
+  <meta name="description" content="Dedykowane aplikacje .NET / C#, mikroserwisy, Blazor i Angular, modernizacja systemów legacy oraz autorskie moduły produktowe Fordon Systems.">
+  <meta name="theme-color" content="#070B14">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Software &amp; Aplikacje .NET — Fordon Systems">
+  <meta property="og:locale" content="pl_PL">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- META PIXEL: configured in js/config.js (APP_CONFIG.metaPixel), injected by js/app.js — see index.html for details. -->
+  <script src="./js/config.js" defer></script>
+  <script src="./js/app.js" defer></script>
+</head>
+<body data-page="software">
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+  <div class="bg" aria-hidden="true"><div class="bg__nebula"></div><canvas id="bg-network"></canvas><div class="bg__hex"></div><div class="bg__spot"></div></div>
+
+  <header class="site-header" data-component="header"></header>
+
+  <main id="main">
+    <div class="container">
+      <nav data-component="breadcrumbs"></nav>
+      <nav data-component="pillar-nav"></nav>
+    </div>
+
+    <!-- 1. Pillar hero -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="page-hero__inner">
+          <span class="page-hero__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 2 12 8 18"/><polyline points="16 6 22 12 16 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg></span>
+          <h1 id="page-title">Oprogramowanie .NET, które rośnie razem z <span class="text-gradient">Twoim biznesem</span>.</h1>
+          <p class="page-hero__lead">
+            Projektuję i rozwijam dedykowane aplikacje, mikroserwisy i moduły produktowe w ekosystemie .NET —
+            od analizy procesu, przez architekturę, po wdrożenie produkcyjne i dokumentację. Bez przypadkowych
+            rozwiązań i bez uzależnienia od jednego dewelopera.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="kontakt.html?pillar=software#formularz">Umów konsultację: Software
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#zakres">Zakres i technologie</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. When to get support -->
+    <section class="section section--tight" aria-labelledby="problems-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Kiedy warto skorzystać ze wsparcia?</span>
+          <h2 id="problems-title">Typowe sygnały, że oprogramowanie hamuje firmę</h2>
+        </div>
+        <ul class="problems">
+          <li class="problem panel" data-reveal>
+            <span class="problem__num">01</span>
+            <h3>Excel i ręczne obejścia zamiast systemu</h3>
+            <p>Kluczowe procesy żyją w arkuszach i mailach, a każda zmiana wymaga ręcznej pracy i niesie ryzyko błędu.</p>
+          </li>
+          <li class="problem panel" data-reveal>
+            <span class="problem__num">02</span>
+            <h3>Legacy, którego nikt nie chce dotykać</h3>
+            <p>Aplikacja działa, ale rozwój jest powolny, brakuje testów i dokumentacji, a wiedza siedzi w głowie jednej osoby.</p>
+          </li>
+          <li class="problem panel" data-reveal>
+            <span class="problem__num">03</span>
+            <h3>Gotowe narzędzie nie pasuje do procesu</h3>
+            <p>Dopasowujesz firmę do oprogramowania zamiast oprogramowania do firmy — i tracisz przewagę operacyjną.</p>
+          </li>
+          <li class="problem panel" data-reveal>
+            <span class="problem__num">04</span>
+            <h3>System nie nadąża za skalą</h3>
+            <p>Rosnący wolumen zamówień, użytkowników lub danych powoduje spowolnienia, timeouty i przestoje.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. Scope & technologies -->
+    <section class="section" id="zakres" aria-labelledby="scope-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Zakres realizacji i technologie</span>
+          <h2 id="scope-title">Od architektury po utrzymanie produkcyjne</h2>
+        </div>
+        <div class="scope__grid">
+          <ul class="checklist">
+            <li><strong>Dedykowane aplikacje biznesowe i webowe</strong> — .NET / C#, ASP.NET Core, projektowane pod Twój proces.</li>
+            <li><strong>Architektura mikroserwisowa i Web API</strong> — skalowalne usługi REST, kolejki, niezależne wdrożenia.</li>
+            <li><strong>Front-end</strong> — Blazor i Angular: szybkie, czytelne interfejsy dla zespołów operacyjnych.</li>
+            <li><strong>Modernizacja legacy</strong> — migracja z .NET Framework do nowoczesnego .NET, refactoring bez zatrzymywania biznesu.</li>
+            <li><strong>Jakość i wdrożenia</strong> — testy automatyczne, CI/CD, wdrożenia na Windows Server / IIS / Docker.</li>
+            <li><strong>Dokumentacja i przekazanie wiedzy</strong> — SOP, runbooki i dokumentacja techniczna dla Twojego zespołu.</li>
+          </ul>
+          <aside class="tech panel" aria-labelledby="tech-title">
+            <h3 id="tech-title">Technologie i narzędzia</h3>
+            <ul class="chips">
+              <li class="chip chip--accent">C#</li>
+              <li class="chip chip--accent">.NET</li>
+              <li class="chip">ASP.NET Core</li>
+              <li class="chip">Blazor</li>
+              <li class="chip">Angular</li>
+              <li class="chip">Entity Framework</li>
+              <li class="chip">REST API</li>
+              <li class="chip">MS SQL Server</li>
+              <li class="chip">Docker</li>
+              <li class="chip">IIS</li>
+              <li class="chip">Git / CI/CD</li>
+            </ul>
+          </aside>
+        </div>
+
+        <!-- PRODUCT MODULES: add future Fordon Systems products/modules as new <li class="product"> items below. -->
+        <div class="products panel panel--glass" id="rozwiazania" aria-labelledby="products-title">
+          <span class="eyebrow">Fordon Systems Products</span>
+          <h2 id="products-title">Rozwiązania Aplikacyjne i Moduły Produktowe</h2>
+          <p>
+            Oprócz projektów szytych na miarę Fordon Systems rozwija własne moduły oparte na doświadczeniach z operacji
+            logistycznych i utrzymania systemów krytycznych. Chcesz wcześniejszy dostęp lub pilotaż w swojej firmie? Daj znać.
+          </p>
+          <ul class="products__grid">
+            <li class="product">
+              <span class="product__status">W przygotowaniu</span>
+              <h3>Monitoring usług i mikroserwisów</h3>
+              <p>Jeden widok stanu usług Windows / IIS / API z alertami — zanim użytkownicy zgłoszą problem.</p>
+            </li>
+            <li class="product">
+              <span class="product__status">W przygotowaniu</span>
+              <h3>Kalkulator kosztu przestoju</h3>
+              <p>Szybka estymacja, ile kosztuje godzina niedostępności systemu — argument do decyzji inwestycyjnych.</p>
+            </li>
+            <li class="product">
+              <span class="product__status">W przygotowaniu</span>
+              <h3>Biblioteka SOP / Runbooków</h3>
+              <p>Ustandaryzowane procedury operacyjne i wdrożeniowe gotowe do dostosowania w Twoim środowisku.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Cooperation model -->
+    <section class="section section--tight" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Model współpracy</span>
+          <h2 id="process-title">Trzy kroki od problemu do działającego rozwiązania</h2>
+        </div>
+        <ol data-component="process"></ol>
+      </div>
+    </section>
+
+    <!-- 5. Contextual pre-fill CTA -->
+    <section class="section section--tight" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2 id="cta-title">Masz aplikację do zbudowania lub uratowania?</h2>
+            <p>Opisz wyzwanie — formularz otworzy się z zaznaczonym obszarem „Software &amp; Aplikacje”.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--primary" href="kontakt.html?pillar=software#formularz">Umów bezpłatną konsultację</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-component="footer"></footer>
+</body>
+</html>
